@@ -30,6 +30,22 @@ Run `carthage` to build the framework and drag the built `ExpandableLabel.framew
 # Usage
 Using ExpandableLabel is very simple. In your storyboard, set the custom class of your UILabel to ExpandableLabel and set the desired number of lines (for the collapsed state):
 
+### Example by EndLess:-
+        ```swift
+        additionalDetailsDescriptionLabel.delegate = self
+        additionalDetailsDescriptionLabel.numberOfLines = 4
+        
+        additionalDetailsDescriptionLabel.collapsedAttributedLink = NSAttributedString(string: "Read More", attributes: [NSAttributedString.Key.foregroundColor : UIColor.orange]) //NSAttributedString(string: "more")
+        
+        additionalDetailsDescriptionLabel.expandedAttributedLink = NSAttributedString(string: "Read Less", attributes: [NSAttributedString.Key.foregroundColor : UIColor.orange])//NSAttributedString(string: "Less")
+       
+        additionalDetailsDescriptionLabel.ellipsis = NSAttributedString(string: "...")
+       
+        // update label expand or collapse state
+        additionalDetailsDescriptionLabel.text = strFull
+        additionalDetailsDescriptionLabel.collapsed = true
+        additionalDetailsDescriptionLabel.shouldCollapse = true
+      ```  
 _**Note:** In Carthage, set Module to `ExpandableLabel`._
 
 ```swift
